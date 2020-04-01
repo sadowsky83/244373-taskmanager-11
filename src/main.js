@@ -372,20 +372,20 @@ const render = (container, template, place) => {
   container.insertAdjacentHTML(place, template);
 };
 
-const main = document.querySelector('.main');
-const mainControl = main.querySelector('.main__control');
+const main = document.querySelector(`.main`);
+const mainControl = main.querySelector(`.main__control`);
 
-render(mainControl, createMenuTemplate(), 'beforeend');
-render(main, createFilterTemplate(), 'beforeend');
-render(main, createBoardTemplate(), 'beforeend');
+render(mainControl, createMenuTemplate(), `beforeend`);
+render(main, createFilterTemplate(), `beforeend`);
+render(main, createBoardTemplate(), `beforeend`);
 
-const board = main.querySelector('.board');
-const boardTasks = main.querySelector('.board__tasks');
+const board = main.querySelector(`.board`);
+const boardTasks = main.querySelector(`.board__tasks`);
 
-render(boardTasks, createTaskEditTemplate(), 'beforeend');
+render(boardTasks, createTaskEditTemplate(), `beforeend`);
 
 for (let i = 0; i < TASK_COUNT; i++) {
-  render(boardTasks, createTaskTemplate(), 'beforeend');
+  render(boardTasks, createTaskTemplate(), `beforeend`);
 }
 
-render(board, createLoadMoreButtonTemplate(), 'beforeend');
+render(board, createLoadMoreButtonTemplate(), `beforeend`);
